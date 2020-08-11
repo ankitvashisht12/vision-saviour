@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vision Saviour</title>
+
+	<style>
+
+		.html, body{
+			background-color: #1e1e1e;
+			color : #fff;
+			width: 300px;
+		}
+
+		.ext-header{
+			display: flex;
+			flex-direction: row;
+		}
+
+		.brand{
+			display: inline;
+		}
+
+		.brand-title{
+			width: 100px;
+			font-size: 1em;
+		}
+
+		.switch{
+			position: relative;
+			display: inline-block;
+			width: 110px;
+			height: 60px;
+
+		}
+
+		.slider{
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #ccc;
+			transition: .4s;
+			border-radius: 34px;
+		}
+
+		.switch input{
+			display: none;
+		}
+
+		.slider::before{
+			position: absolute;
+			content: "";
+			height: 50px;
+			width: 50px;
+			left: 10px;
+			bottom: 5px;
+			background-color: white;
+			transition: .4s;
+			border-radius: 50px;
+		}
+
+		input:checked + .slider{
+			background-color: #ff278c;
+
+		}
+		
+		input:checked + .slider::after{
+			transition: translateX(50px);
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="ext-header">
+		<div class="brand">
+			<img src="icon_128.png" alt="Vision Saviour Logo" width="64px"> 
+			<h1 class="brand-title">Vision Saviour <span class="version">(1.0.0)</span></h1>
+		</div>
+		<div class="ext-links">
+			
+		</div>
+		
+	</div>
+	<div class="counter-area">
+		<label class="switch">
+			<input type="checkbox">
+			<span class="slider"></span>
+		</label>
+	</div>
+	<div class="ext-options">
+		<div class="ext-option">
+			<label for="screen-time" id="screen-time">Screen Time (min)</label>
+			<input type="number" id="screen-time" value="20" min="5" max="60" required>	
+		</div>
+		<div class="ext-option">
+			<label for="break-time" id="break-time">Break Time (sec)</label>
+			<input type="number" id="break-time" value="20" min="20" max="60" required>	
+		</div>
+		<div class="ext-option">
+			<label for="show-notification" id="show-notification">Show Notification</label>
+			<input type="checkbox" name="show-notification" id="show-notification">
+		</div>
+		<div class="ext-option">
+			<label for="play-sound" id="play-sound" class="switch">Play Sound</label>
+			<input type="checkbox" name="play-sound" id="play-sound">
+			
+		</div>
+	</div>
+	
+
+	
+</body>
+</html>
