@@ -8,9 +8,10 @@
 	<style>
 
 		.html, body{
-			background-color: #1e1e1e;
+			background-color: #121212;
 			color : #fff;
 			width: 300px;
+		
 		}
 
 
@@ -18,11 +19,11 @@
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			background-color: #131313;
+			background-color: #1e1e1e;
 			padding : 2px 10px;
 			align-items: center;
 			border-radius: 10px;
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 		}
 
 		.brand{
@@ -34,53 +35,51 @@
 			font-size: 1em;
 		}
 
-		.switch{
-			position: relative;
-			display: inline-block;
-			width: 110px;
-			height: 60px;
-
-		}
-
 		svg{
 			padding : 3px;
 		}
 
-		.slider{
-			position: absolute;
-			cursor: pointer;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background-color: #ccc;
-			transition: .4s;
-			border-radius: 34px;
+		.counter-area{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			padding: 2px 10px;
+			background-color: #1e1e1e;
+			border-radius: 10px;
+			margin-bottom: 10px;
 		}
 
-		.switch input{
-			display: none;
+		.ext-options{
+			padding : 2px 10px;
+			margin-bottom: 10px;
+			background-color: #1e1e1e;
+			border-radius: 10px;
 		}
 
-		.slider::before{
-			position: absolute;
-			content: "";
-			height: 50px;
-			width: 50px;
-			left: 10px;
-			bottom: 5px;
-			background-color: white;
-			transition: .4s;
-			border-radius: 50px;
+		.ext-options > div{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding : 5px 0px;	
 		}
 
-		input:checked + .slider{
-			background-color: #ff278c;
-
+		.dev-info{
+			padding: 1px 0px;
+			margin-bottom: 5px;
+			background-color: #1e1e1e;
+			border-radius: 10px;
+			text-decoration: none;
+			text-align: center;
 		}
-		
-		input:checked + .slider::after{
-			transition: translateX(50px);
+
+		p{
+			color: #d9d9d9;
+		}
+
+		a:link{
+			color: #fff;
+			text-decoration: none;
 		}
 	</style>
 
@@ -113,13 +112,30 @@
 			</g>
 			</svg>
 		</div>
-		
 	</div>
+
+
 	<div class="counter-area">
-		<label class="switch">
+		<!-- <label class="switch">
 			<input type="checkbox">
 			<span class="slider"></span>
-		</label>
+		</label> -->
+
+		<div class="timer-area">
+			<span class=timer>20 : 00</span> minutes left
+		</div>
+		<div class="action-btn">
+			<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+				<g style="fill: #00ff00;">
+					<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z"/>
+				</g>
+			</svg>
+
+
+			<!--  cross svg
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.5 16.084l-1.403 1.416-4.09-4.096-4.102 4.096-1.405-1.405 4.093-4.092-4.093-4.098 1.405-1.405 4.088 4.089 4.091-4.089 1.416 1.403-4.092 4.087 4.092 4.094z"/></svg> -->
+
+		</div>
 	</div>
 	<div class="ext-options">
 		<div class="ext-option">
@@ -137,8 +153,17 @@
 		<div class="ext-option">
 			<label for="play-sound" id="play-sound" class="switch">Play Sound</label>
 			<input type="checkbox" name="play-sound" id="play-sound">
-			
 		</div>
+	</div>
+
+	<div class="dev-info">
+		<p>
+			Developed By <a href="https://ankitvashisht12.github.io/">Ankit Vashisht</a> with <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
+			<g style="fill: red;">
+				<path d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"/>
+			</g>
+			</svg>
+		</p>
 	</div>
 	
 
