@@ -41,15 +41,18 @@
 			padding : 3px;
 		}
 
+		.counter-container{
+			padding: 2px 10px;
+			background-color: #1e1e1e;
+			border-radius: 10px;
+			margin-bottom: 10px;
+		}
+
 		.counter-area{
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
-			padding: 2px 10px;
-			background-color: #1e1e1e;
-			border-radius: 10px;
-			margin-bottom: 10px;
 		}
 
 		.ext-options{
@@ -84,6 +87,11 @@
 			color: #fff;
 		}
 
+		hr{
+			border-radius: 50%;
+			color : #303030;
+		}
+
 
 		#reset-btn{
 			background-color: transparent;
@@ -94,11 +102,16 @@
 		}
 
 		#play-pause-btn{
+			position: relative;
 			background-color: transparent;
 			border: none;
 			cursor:pointer;
 			overflow: hidden;
 			outline:none;	
+		}
+	
+		#stop{
+			display: none;
 		}
 	</style>
 
@@ -140,31 +153,28 @@
 		</div>
 	</div>
 
-
-	<div class="counter-area">
-		<!-- <label class="switch">
-			<input type="checkbox">
-			<span class="slider"></span>
-		</label> -->
-
-		<div class="timer-area">
-			<span id="timer-min">20</span> : <span id="timer-sec">00</span> minutes left
-		</div>
-		<div class="action-btn">
-			<button id="play-pause-btn">
-				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
-					<g style="fill: #00ff00;">
-						<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z"/>
-					</g>
-				</svg>	
-			</button>
+	<div class="counter-container">
+		<div class="counter-area">
+			<div class="timer-label">
+				<h2>Screen Time : </h2>
+			</div>
+			<div class="timer-area">
+				<span id="screen-timer-min">20</span> : <span id="screen-timer-sec">00</span> minutes left
+			</div>
 			
-
-			<!--  cross svg
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.5 16.084l-1.403 1.416-4.09-4.096-4.102 4.096-1.405-1.405 4.093-4.092-4.093-4.098 1.405-1.405 4.088 4.089 4.091-4.089 1.416 1.403-4.092 4.087 4.092 4.094z"/></svg> -->
-
+		</div>
+		<hr>
+		<div class="counter-area">
+			<div class="timer-label">
+				<h2>Break Time : </h2>
+			</div>
+			<div class="timer-area">
+				<span id="break-timer-min">00</span> : <span id="break-timer-sec">20</span> seconds left
+			</div>
+			
 		</div>
 	</div>
+	
 	<div class="ext-options">
 		<div class="ext-option">
 			<label for="screen-time">Screen Time (min)</label>
@@ -179,14 +189,14 @@
 			<input type="checkbox" name="show-notification" id="show-notification">
 		</div>
 		<div class="ext-option">
-			<label for="play-sound" class="switch">Play Sound</label>
+			<label for="play-sound">Play Sound</label>
 			<input type="checkbox" name="play-sound" id="play-sound">
 		</div>
 	</div>
 
 	<div class="dev-info">
 		<p>
-			Developed By <a href="https://ankitvashisht12.github.io/" target="_blank">Ankit Vashisht</a> with <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
+			Developed By <a href="https://ankitvashisht12.github.io/" target="_blank">Ankit Vashisht</a> with <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
 			<g style="fill: red;">
 				<path d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"/>
 			</g>
