@@ -10,7 +10,7 @@
 		.html, body{
 			background-color: #121212;
 			color : #fff;
-			width: 300px;
+			width: 350px;
 			font-family:'Nunito', sans-serif;  
 			font-size: 0.8em;
 		
@@ -87,6 +87,11 @@
 			color: #fff;
 		}
 
+		.dev-info > a{
+			
+			color: #fff;
+		}
+
 		hr{
 			border-radius: 50%;
 			color : #303030;
@@ -157,7 +162,7 @@
 
 			<div id="play-stop-btn">
 				<button id="play-btn">
-					<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
+					<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
 						<g style="fill: #00ff00;">
 							<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z"/>
 						</g>
@@ -165,7 +170,7 @@
 				</button>
 	
 				<button id='stop-btn'>
-					<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
+					<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
 						<g style="fill:red">
 							<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.5 16.084l-1.403 1.416-4.09-4.096-4.102 4.096-1.405-1.405 4.093-4.092-4.093-4.098 1.405-1.405 4.088 4.089 4.091-4.089 1.416 1.403-4.092 4.087 4.092 4.094z"/>
 						</g>
@@ -193,7 +198,7 @@
 				<h2>Break Time : </h2>
 			</div>
 			<div class="timer-area">
-				<span id="break-timer-min">00</span> : <span id="break-timer-sec">_ _</span> seconds left
+				<span id="break-timer-sec">_ _</span> seconds left
 			</div>
 			
 		</div>
@@ -202,11 +207,11 @@
 	<div class="ext-options">
 		<div class="ext-option">
 			<label for="screen-time">Screen Time (min)</label>
-			<input type="number" id="screen-time" value="20" min="5" max="60" required>	
+			<input type="number" id="screen-time" value="20" min="20" max="59" required>	
 		</div>
 		<div class="ext-option">
 			<label for="break-time">Break Time (sec)</label>
-			<input type="number" id="break-time" value="20" min="20" max="60" required>	
+			<input type="number" id="break-time" value="20" min="20" max="59" required>	
 		</div>
 		<div class="ext-option">
 			<label for="show-notification">Show Notification</label>
@@ -220,7 +225,7 @@
 
 	<div class="dev-info">
 		<p>
-			Developed By <a href="https://ankitvashisht12.github.io/" target="_blank">Ankit Vashisht</a> with <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
+			Copyright ©️ | Developed By <a href="https://ankitvashisht12.github.io/" target="_blank">Ankit Vashisht</a> with <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
 			<g style="fill: red;">
 				<path d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"/>
 			</g>

@@ -17,13 +17,22 @@ function startScreenCountDown(res){
 	screenInterval = setInterval(() => {
 		
 		if(time == 0){
-			chrome.notifications.create("Break Start Notification", {
-				type: "basic",
-				iconUrl: "icon_128.png",
-				title: "Break Time Starts",
-				"message": "Take atleast 20 seconds break. See 20 feet distant."
 
-			});
+			if(res.show_notification){
+				chrome.notifications.create("Break Start Notification", {
+					type: "basic",
+					iconUrl: "icon_128.png",
+					title: "Break Time Starts",
+					"message": "Take atleast 20 seconds break and look atleast 20 feet away."
+	
+				});
+			}
+			
+			if(res.play_sound){
+				var audio  = new Audio('sounds/ding.mp3');
+				audio.play();
+			}
+			
 			clearInterval(screenInterval);
 			chrome.runtime.sendMessage({screen_min : startingMin, screen_sec : '00'});
 			startBreakCountdown(res);
@@ -48,13 +57,22 @@ function startBreakCountdown(res){
 	
 	breakInterval = setInterval( ()=>{
 		if(breakTime == 0){
-			chrome.notifications.create("Break End Notification", {
-				type: "basic",
-				iconUrl: "icon_128.png",
-				title: "Screen Time Starts",
-				"message": "You can resume your work now."
 
-			});
+			if(res.show_notification){
+				chrome.notifications.create("Break End Notification", {
+					type: "basic",
+					iconUrl: "icon_128.png",
+					title: "Screen Time Starts",
+					"message": "You can use screen now."
+	
+				});
+			}
+			
+			if(res.play_sound){
+				var audio  = new Audio('sounds/ding.mp3');
+				audio.play();
+			}
+			
 			clearInterval(breakInterval);
 			chrome.runtime.sendMessage({break_sec : startBreakTime});
 			startScreenCountDown(res);

@@ -100,20 +100,30 @@ chrome.runtime.onMessage.addListener(
 
 // event listener on screen-time input
 document.getElementById("screen-time").addEventListener("change", ()=>{
-	var getScreenTime = document.getElementById("screen-time").value;
-	document.getElementById("screen-timer-min").innerHTML = getScreenTime;
-	chrome.storage.sync.set({'screen_time': parseInt(getScreenTime)});
-	chrome.storage.sync.set({'start_screen_time': parseInt(getScreenTime)});
+	chrome.storage.sync.get(['running'], function(obj){
+		if(obj.running == false){
+			
+			var getScreenTime = document.getElementById("screen-time").value;
+			document.getElementById("screen-timer-min").innerHTML = getScreenTime;
+			chrome.storage.sync.set({'screen_time': parseInt(getScreenTime)});
+			chrome.storage.sync.set({'start_screen_time': parseInt(getScreenTime)});
+		}
+	});
+	
 });
 
 
 // event listener on break time 
 document.getElementById("break-time").addEventListener("change", ()=>{
-	var getBreakTime = document.getElementById("break-time").value;
-	document.getElementById("break-timer-sec").innerHTML = getBreakTime; 
-	chrome.storage.sync.set({'break_time': parseInt(getBreakTime)});
-	chrome.storage.sync.set({'start_break_time': parseInt(getBreakTime)});
-
+	chrome.storage.sync.get(['running'], function(obj){
+		if(obj.running == false){
+			
+			var getBreakTime = document.getElementById("break-time").value;
+			document.getElementById("break-timer-sec").innerHTML = getBreakTime; 
+			chrome.storage.sync.set({'break_time': parseInt(getBreakTime)});
+			chrome.storage.sync.set({'start_break_time': parseInt(getBreakTime)});
+		}
+	});
 });
 
 
