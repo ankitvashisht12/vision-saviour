@@ -10,7 +10,7 @@ function reset(){
 	
 };
 
-chrome.storage.sync.get(['screen_time', 'screen_time_sec', 'break_time', 'show_notification', 'play_sound'], function(obj){
+chrome.storage.sync.get(['screen_time', 'screen_time_sec', 'break_time', 'show_notification', 'play_sound', 'running'], function(obj){
 	
 	if(obj.screen_time){
 		document.getElementById("screen-timer-min").innerHTML = obj.screen_time	
@@ -30,6 +30,11 @@ chrome.storage.sync.get(['screen_time', 'screen_time_sec', 'break_time', 'show_n
 
 	if(obj.play_sound){
 		document.getElementById("play-sound").checked = true;
+	}
+
+	if(obj.running){
+		document.getElementById('play-btn').style.display = 'none';
+		document.getElementById('stop-btn').style.display = 'inline';
 	}
 
 });
@@ -79,6 +84,21 @@ document.getElementById("play-sound").addEventListener("change", ()=>{
 	}else{
 		chrome.storage.sync.set({'play_sound':false});
 	}
+});
+
+document.getElementById("play-btn").addEventListener('click', ()=>{
+	document.getElementById('play-btn').style.display = 'none';
+	document.getElementById('stop-btn').style.display = 'inline';
+	chrome.storage.sync.set({'running':true});
+
+
+	chrome.runtime.sendMessage({running: true});
+});
+
+document.getElementById("stop-btn").addEventListener('click', ()=>{
+	document.getElementById('play-btn').style.display = 'inline';
+	document.getElementById('stop-btn').style.display = 'none';
+	chrome.storage.sync.set({'running':false});
 });
 
 chrome.windows.onRemoved.addListener(reset);

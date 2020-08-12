@@ -1,4 +1,15 @@
 // Counter Logic
+
+chrome.runtime.onMessage.addListener(
+	function(response, sender, sendResponse) {
+		if(response.running == true){
+			
+		}else if(response.running == false){
+
+		}
+});
+
+
 var screenInterval, breakInterval;
 chrome.storage.sync.get(['start_screen_time', 'start_break_time', 'screen_time', 'break_time', 'show_notification', 'play_sound'], function(res){
 	startScreenCountDown(res);

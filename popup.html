@@ -101,16 +101,21 @@
 			outline:none;	
 		}
 
-		#play-pause-btn{
+		#play-stop-btn{
 			position: relative;
+			display: inline;
+				
+		}
+
+		#play-stop-btn > button{
 			background-color: transparent;
 			border: none;
 			cursor:pointer;
 			overflow: hidden;
-			outline:none;	
+			outline:none;
 		}
 	
-		#stop{
+		#stop-btn{
 			display: none;
 		}
 	</style>
@@ -149,6 +154,25 @@
 					</g>
 					</svg>
 			</button>
+
+			<div id="play-stop-btn">
+				<button id="play-btn">
+					<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
+						<g style="fill: #00ff00;">
+							<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z"/>
+						</g>
+					</svg>	
+				</button>
+	
+				<button id='stop-btn'>
+					<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
+						<g style="fill:red">
+							<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.5 16.084l-1.403 1.416-4.09-4.096-4.102 4.096-1.405-1.405 4.093-4.092-4.093-4.098 1.405-1.405 4.088 4.089 4.091-4.089 1.416 1.403-4.092 4.087 4.092 4.094z"/>
+						</g>
+					</svg> 
+				</button>	
+			</div>
+			
 			
 		</div>
 	</div>
