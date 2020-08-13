@@ -1,6 +1,6 @@
 # Vision Saviour : Protect Your Eye Vision with 20-20-20 Rule
 
-Vision Saviour is a chrome extension that notify user after every 20 minutes to take 20 seconds break and look 20 feet away. This 20-20-20 Rule can protect user's eye vision.
+Vision Saviour is a browser extension that notify user after every 20 minutes to take 20 seconds break and look 20 feet away. This 20-20-20 Rule can protect user's eye vision.
 
 Want to know more about 20-20-20 rule and how does it helps in preventing eye strain ? 
 
