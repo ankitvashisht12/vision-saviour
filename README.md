@@ -10,7 +10,7 @@ Here are few articles to read :
 2. [How to prevent eyestrain with the 20-20-20 rule?](https://www.cnet.com/health/how-to-prevent-eyestrain-the-20-20-20-rule/) by CNET
 
 
-### Are you Chrome User / Brave Browser User ? 
+### Are you Chrome User ? 
 
 If you're using chrome / brave browser, you can install this extension manually. Below are the steps you can follow : 
 
@@ -21,7 +21,7 @@ If you're using chrome / brave browser, you can install this extension manually.
 
 Now you can see the extesion icon on toolbar in your browser.
 
-> NOTE : The reason my extension is not available on chrome web store is that there's some issue with google developer payment option. 
+> NOTE :  The reason my extension is not available on chrome web store is that there's some issue with google developer payment option. 
 
 ### Firefox User ? 
 
