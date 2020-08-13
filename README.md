@@ -11,7 +11,7 @@ Here are few articles to read :
 
 ## Contributor
 
-- Ankit Vashisht | [website](https://ankitvashisht.github.io) 
+- Ankit Vashisht | [website](https://ankitvashisht12.github.io/) 
 
 ## License and Copyright
 
