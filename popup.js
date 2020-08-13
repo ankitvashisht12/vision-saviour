@@ -64,18 +64,28 @@ chrome.storage.sync.get(['start_break_time', 'start_screen_time','show_notificat
 	console.log(obj);
 	if(obj.start_screen_time){
 		document.getElementById("screen-time").value = (obj.start_screen_time).toString();
+	}else{
+		chrome.storage.sync.set({'screen_time': 20});
+		chrome.storage.sync.set({'start_screen_time': 20});
 	}
 
 	if(obj.start_break_time){
 		document.getElementById("break-time").value = (obj.start_break_time).toString();
+	}else{
+		chrome.storage.sync.set({'break_time': 20});
+		chrome.storage.sync.set({'start_break_time': 20});
 	}
 
 	if(obj.show_notification){
 		document.getElementById("show-notification").checked = true;
+	}else{
+		chrome.storage.sync.set({'show_notification':true});
 	}
 
 	if(obj.play_sound){
 		document.getElementById("play-sound").checked = true;
+	}else{
+		chrome.storage.sync.set({'play_sound':true});
 	}
 
 	if(obj.running){
@@ -84,6 +94,7 @@ chrome.storage.sync.get(['start_break_time', 'start_screen_time','show_notificat
 	}
 
 });
+
 
 
 // runtime onMessage event listener -- timer update
